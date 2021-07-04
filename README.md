@@ -1,42 +1,28 @@
 
-Name in Box
+# Hollow-square-with-name-written-in-it.
 
-This pattern is to get a rectangular structured box with help of (+ - | and space) like below
+This is a simple java program written only by using for loops and if else statements.
+Two for loops are written one for row and the other for column.
 
-   +-------------------------------+
-   |                               |
-   |                               |
-   |                               |
-   |                               |
-   |                               | 
-   |                               |
-   +-------------------------------+
-This code will help in getting the layout
+for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
+since we need a hollow square, we have used if else loops for conditions
 
-   for(int i=0;i<r;i++)
- {
-    for(int j=0;j<c;j++)
-     {
-      if(i==0 && j==0 || i==0 && j==c-1 || i==r-1 && j==0|| i==r-1 && j==c-1)
-        System.out.print("+");
-      else if(i==0 || i==r-1)
-         System.out.print("-");
-      else if(j==0 || j==c-1)
-           System.out.print("|");
-And in the above box we need to print our name in the 2 and last row and leaving to spaces after the name before reaching the edge(space occupied by name should be dynamic)
+  if ((i == 1 && j == 1) || (i == 1 && j == n) || (i == m && j == 1) || (i == m && j == n))
+                    System.out.print("+");
 
-  else if(i==r-3 && j==c-(a+2))
-        {
-           System.out.print(name);
-           j+=a-1;
-         }
-this code helps to print name
+                else if (i == 1 || i == m)
+                    System.out.print("-");
 
-   +-------------------------------+
-   |                               |
-   |                               |
-   |                               |
-   |                               |
-   |                    ramdeshai  | 
-   |                               |
-   +-------------------------------+
+                else if ((i == 2 || i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9)
+                        && (j == 1 || j == n))
+                    System.out.print("|");
+The name given by the user must come in the last but one line and leaving one column space to the right
+Following the above condition the code is written.
+
+                else if (i == m - 2 && j == n - (name.length() + 2)) {
+                    for (int k = 0; k < name.length(); k++)
+                        System.out.print(name.charAt(k));
+                    j = j + name.length() - 1;
+
+ 
