@@ -1,5 +1,6 @@
 
 Name in Box
+
 This pattern is to get a rectangular structured box with help of (+ - | and space) like below
 
    +-------------------------------+
